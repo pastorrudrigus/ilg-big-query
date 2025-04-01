@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "tickets-carol",
+  "private_key_id": "e53dd744385ee0476f378c45f757f0740cc8d3d4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCgDcBQyKAXoJco\nRBJKjm+yJ/smMdoBnxbk57OzWLPlp5yAvU8tl9GlGURbLQcWBGYrmn7KuodLjnzv\nuG2iLcsryuzwZ2Oqlrwg6XFsdlaEsxCrRS4KSHS2LSHDPcfGH8FhkCol3f8ybIwp\nqFw6a/Jqu/imet6yItF2SM/mBDmupOKBDzEdkcPC4JLzaN8m6P4VeYMNNwxpKm5y\nqBApy/NoEzFiOPUTgCPslzExAGPm1MfvRtnxPzI4xL5UxtqSuUDvHc0n49GOslDY\nPNLQTWMHH0a8g2y5gi3yIFhZcXYhN4rlpEy97LWNIq3pmBG6QxHPDhdi0OkABejg\n45r6bvSXAgMBAAECggEACo9dtPbHuUdbMcjr/AdRz0tcArUfUSQR+qBe9uJPXEOm\ny8exxaxSpLX6EJnz8bvwkcfrvax46L9J9vcQJLcoxIbrAyGPLd4sI2/DkAhuxOqb\nmvFBjGQjbzGjHKKi36uQssM0RLNU9xq6VLVLAH/GyswEJ9fLga1SbJ95OA/nTmJv\nzPAKtacAwddaH0zPETr/HWKuIWd8c7ERIc7OgBOZGcMcdt4HIw5ZVhSg36qrkVrF\nbJ0mDfVnOdMGpb70WPkgn2Rm8NQ3cDftiy6r7E6slIH23GSfk39m/p1VQY2irANw\n5t592ZaAvE01guW6zJtuCTNYTCuTqyyyvE9poUh8IQKBgQDdvSiA3+jbfb2prfi6\n1+mKOXaZczuzxx2whZwnE4UTBHLCbJAyF2c9ic5IssZmxD2gRvG1T8idBKCy3LPM\nbJjNKnfmw4fvALb7UPKL//fAbfCq+a0xw06TmpPMbUDWHLnNuUp2LdcJjE2mZNAS\nP0NmwCX+aeD6VAr1W56vsM4IGwKBgQC4yKWVnfF3u01NwwPGpRPMaBnpmLO3pUZ6\nBqBggmDbVeDz7x4ax6wtZ+DjgJ8nwscQfF51M5yj7p6wP53xf456Xkg4BXHkqQQ6\nlXyI8khSIPb+X+Cm8YaUELiaMpcnYTLZsQE5yOZoWBpPRKYIV1gU4OHaAfGZfcdy\n3mwdsEhFNQKBgBs2esEOObquPNeVJUBw/RVcpgSBEuOmXStrylU1XRCPbDIWNsAf\nBSmVPv7HCfhUvydrbYCN8RXsGni5A0vkTABp5NsqRgV79fjz30B1QoeYNoAVMj84\nM+2De/4LrnhYgCkSQ2Qrjgd685CnMK38m54BmOgXQGgYZlvkSZ5QOYjfAoGAEKet\nHQ4uXH9aWV7xcS8h2LOtWju0PyI7dvYv8GLv/fUAoJv1164Vm8YYJAlMzxWkQZ0k\nGmY7gR8Z2ILzZnf7zJXA5qO+/0AorGsa3XERCa4E9SqJIiL04VWcffF/ZEJDhhGJ\nLb8o3VDLlkd2u5u7ya33TWINd6s5leXsUsS3zt0CgYEAvEpU0eElRYmyVbyJYYud\nWg1FvmqJmBNrb2NGiA7LWJpCLmFtTfaNd8Atr7qriObiLgXEnmWus9NV8jtzGiTd\nqY8EoDb0+LSWwy+SrgRaecP312WFcru4UO974YjYaQW8b5XNlQuGtjtgB9pZy5aB\n6Tyz3x4cPDgcKBgbeqlBxjc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "n8n-130@tickets-carol.iam.gserviceaccount.com",
+  "client_id": "108026179664728485015",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/n8n-130%40tickets-carol.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
