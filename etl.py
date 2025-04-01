@@ -4,9 +4,7 @@ import re
 import csv
 from io import BytesIO
 from google.cloud import bigquery
-from flask import Flask, request
 
-# Função que encapsula toda a lógica
 def run_etl():
     # 1. Obter o mapeamento dos campos
     fields_url = "https://ilgcomex.bitrix24.com.br/rest/96/alvz97lfjlgbne97/crm.deal.fields"
@@ -51,7 +49,6 @@ def run_etl():
     print("Colunas renomeadas do DataFrame:")
     print(df.columns.tolist())
 
-    # Obter status e ajustar coluna STAGE_ID
     status_url = "https://ilgcomex.bitrix24.com.br/rest/96/alvz97lfjlgbne97/crm.status.list"
     status_fields = requests.get(status_url)
     dic = {}
@@ -59,7 +56,6 @@ def run_etl():
         dic[i['STATUS_ID']] = i['NAME']
     df['STAGE_ID'] = df['STAGE_ID'].map(dic)
 
-    # Funções auxiliares para ajustar colunas e dados
     def make_columns_unique(df):
         cols = pd.Series(df.columns)
         for dup in cols[cols.duplicated()].unique():
@@ -86,7 +82,7 @@ def run_etl():
     for col in df.select_dtypes(include=['object']).columns:
         df[col] = df[col].astype(str)
     df = df.reset_index(drop=True)
-    # Remover quebras de linha
+
     def remove_newlines(x):
         if isinstance(x, str):
             return re.sub(r'[\r\n]+', ' ', x)
@@ -95,10 +91,10 @@ def run_etl():
         df[col] = df[col].apply(remove_newlines)
 
     # 4. Carregar os dados no BigQuery
-    SERVICE_ACCOUNT_JSON = 'tickets-carol-e53dd744385e.json'  # certifique-se de incluir esse arquivo no pacote
+    SERVICE_ACCOUNT_JSON = 'tickets-carol-e53dd744385e.json'  # Certifique-se de incluir este arquivo no pacote da function
     client = bigquery.Client.from_service_account_json(SERVICE_ACCOUNT_JSON)
     project_id = client.project
-    dataset_id = 'ilg'    # ajuste conforme necessário
+    dataset_id = 'ilg'
     table_id = 'deals'
     table_ref = f"{project_id}.{dataset_id}.{table_id}"
 
@@ -117,11 +113,11 @@ def run_etl():
     job.result()
     print("Dados importados com sucesso para o BigQuery!")
 
-# Handler da Cloud Function (via HTTP)
-def etl_handler(request):
+# Handler da function
+def handler(event, context):
     try:
         run_etl()
-        return "ETL executado com sucesso!", 200
+        return "ETL executado com sucesso!"
     except Exception as e:
         print("Erro na execução do ETL:", e)
-        return f"Erro: {e}", 500
+        return f"Erro: {e}"
